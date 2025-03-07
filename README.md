@@ -1,4 +1,4 @@
-# Portfolio V2
+# AnuhasDev Portfolio V2
 
 Greetings, everyone!
 
@@ -8,6 +8,7 @@ Allow me to present myself—I’m Anuhas Dissanayake. I’m excited to showcase
 
 - ReactJS
 - Tailwind CSS
+- React Router
 - AOS
 - Firebase
 - Framer Motion
@@ -16,7 +17,7 @@ Allow me to present myself—I’m Anuhas Dissanayake. I’m excited to showcase
 - SweetAlert2
 
 **Website Link:**  
-[https://anuhas.dev/](https://anuhas.dev/)
+[https://anuhas.dev](https://anuhas.dev)
 
 Feel free to use this project, but please give credit to the original creator, [Eki Zulfar Rachman](https://github.com/EkiZR). Thank you! 🙌
 
@@ -55,13 +56,23 @@ Make sure you have the following installed:
    npm install --legacy-peer-deps
    ```
 
-3. **Run the project:**
+3. **Set environment variables:**
+
+Create a `.env` file in the project directory and add the following environment variables:
+
+```env
+VITE_RESUME_URL=your_resume_url
+VITE_WEB3_FORMS_ACCESS_KEY=your_access_key
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+```
+
+4. **Run the project:**
 
    ```bash
    npm run dev
    ```
 
-4. **Open in browser:**
+5. **Open in browser:**
 
    Access the application through the link displayed in your terminal.
 

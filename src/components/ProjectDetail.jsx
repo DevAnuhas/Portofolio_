@@ -16,6 +16,9 @@ import {
 	SiTypescript,
 	SiSharp,
 	SiReact,
+	SiReactrouter,
+	SiReacthookform,
+	SiZod,
 	SiTailwindcss,
 	SiShadcnui,
 	SiMui,
@@ -31,6 +34,7 @@ import {
 	SiFirebase,
 	SiFigma,
 	SiOpenai,
+	SiGoogleanalytics,
 	SiHackthebox,
 } from "@icons-pack/react-simple-icons";
 import Swal from "sweetalert2";
@@ -42,6 +46,9 @@ const TECH_ICONS = {
 	TypeScript: SiTypescript,
 	"C#": SiSharp,
 	ReactJS: SiReact,
+	"React Router": SiReactrouter,
+	"React Hook Form": SiReacthookform,
+	Zod: SiZod,
 	TailwindCSS: SiTailwindcss,
 	"Shadcn UI": SiShadcnui,
 	"Material UI": SiMui,
@@ -57,6 +64,7 @@ const TECH_ICONS = {
 	Firebase: SiFirebase,
 	Figma: SiFigma,
 	OpenAI: SiOpenai,
+	"Google Analytics": SiGoogleanalytics,
 	default: SiHackthebox,
 };
 

@@ -175,6 +175,13 @@ export default function FullWidthTabs() {
 
 			const certificateData = certificateSnapshot.docs.map((doc) => doc.data());
 
+			// Sort projects by CompletedDate in ascending order, with null values first
+			projectData.sort((a, b) => {
+				if (!a.CompletedDate) return -1;
+				if (!b.CompletedDate) return 1;
+				return new Date(b.CompletedDate) - new Date(a.CompletedDate);
+			});
+
 			setProjects(projectData);
 			setCertificates(certificateData);
 
