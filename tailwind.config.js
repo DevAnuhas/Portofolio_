@@ -4,11 +4,9 @@ export default {
 	theme: {
 		extend: {
 			backdropBlur: {
-				sm: '4px',
-			  },
-			
-			
-		  },
+				sm: "4px",
+			},
 		},
+	},
 	plugins: [],
-}
+};

@@ -1,18 +1,18 @@
-import React, { useState } from "react"
-import { Modal, IconButton, Box, Fade, Backdrop, Zoom, Typography } from "@mui/material"
-import CloseIcon from "@mui/icons-material/Close"
-import FullscreenIcon from "@mui/icons-material/Fullscreen"
+import { useState } from "react";
+import { Modal, IconButton, Box, Backdrop, Typography } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import FullscreenIcon from "@mui/icons-material/Fullscreen";
 
-const Certificate = ({ ImgSertif }) => {
-	const [open, setOpen] = useState(false)
+const Certificate = ({ ImgCertif }) => {
+	const [open, setOpen] = useState(false);
 
 	const handleOpen = () => {
-		setOpen(true)
-	}
+		setOpen(true);
+	};
 
 	const handleClose = () => {
-		setOpen(false)
-	}
+		setOpen(false);
+	};
 
 	return (
 		<Box component="div" sx={{ width: "100%" }}>
@@ -39,7 +39,8 @@ const Certificate = ({ ImgSertif }) => {
 							filter: "contrast(1.05) brightness(1) saturate(1.1)",
 						},
 					},
-				}}>
+				}}
+			>
 				{/* Certificate Image with Initial Filter */}
 				<Box
 					sx={{
@@ -54,10 +55,11 @@ const Certificate = ({ ImgSertif }) => {
 							backgroundColor: "rgba(0, 0, 0, 0.1)",
 							zIndex: 1,
 						},
-					}}>
+					}}
+				>
 					<img
 						className="certificate-image"
-						src={ImgSertif}
+						src={ImgCertif}
 						alt="Certificate"
 						style={{
 							width: "100%",
@@ -85,7 +87,8 @@ const Certificate = ({ ImgSertif }) => {
 						cursor: "pointer",
 						zIndex: 2,
 					}}
-					onClick={handleOpen}>
+					onClick={handleOpen}
+				>
 					{/* Hover Content */}
 					<Box
 						className="hover-content"
@@ -99,7 +102,8 @@ const Certificate = ({ ImgSertif }) => {
 							textAlign: "center",
 							width: "100%",
 							color: "white",
-						}}>
+						}}
+					>
 						<FullscreenIcon
 							sx={{
 								fontSize: 40,
@@ -112,7 +116,8 @@ const Certificate = ({ ImgSertif }) => {
 							sx={{
 								fontWeight: 600,
 								textShadow: "0 2px 4px rgba(0,0,0,0.3)",
-							}}>
+							}}
+						>
 							View Certificate
 						</Typography>
 					</Box>
@@ -142,7 +147,8 @@ const Certificate = ({ ImgSertif }) => {
 					"& .MuiBackdrop-root": {
 						backgroundColor: "rgba(0, 0, 0, 0.9)",
 					},
-				}}>
+				}}
+			>
 				<Box
 					sx={{
 						position: "relative",
@@ -155,7 +161,8 @@ const Certificate = ({ ImgSertif }) => {
 						"&:focus": {
 							outline: "none",
 						},
-					}}>
+					}}
+				>
 					{/* Close Button */}
 					<IconButton
 						onClick={handleClose}
@@ -172,13 +179,14 @@ const Certificate = ({ ImgSertif }) => {
 								transform: "scale(1.1)",
 							},
 						}}
-						size="large">
+						size="large"
+					>
 						<CloseIcon sx={{ fontSize: 24 }} />
 					</IconButton>
 
 					{/* Modal Image */}
 					<img
-						src={ImgSertif}
+						src={ImgCertif}
 						alt="Certificate Full View"
 						style={{
 							display: "block",
@@ -191,7 +199,7 @@ const Certificate = ({ ImgSertif }) => {
 				</Box>
 			</Modal>
 		</Box>
-	)
-}
+	);
+};
 
-export default Certificate
+export default Certificate;
