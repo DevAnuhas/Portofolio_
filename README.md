@@ -18,7 +18,7 @@ Allow me to present myself—I’m Anuhas Dissanayake. I’m excited to showcase
 **Website Link:**  
 [https://anuhas.dev/](https://anuhas.dev/)
 
-Feel free to use this project, but please give credit to the original creator, [https://github.com/EkiZR](Eki Zulfar Rachman). Thank you! 🙌
+Feel free to use this project, but please give credit to the original creator, [Eki Zulfar Rachman](https://github.com/EkiZR). Thank you! 🙌
 
 ---
 
@@ -115,10 +115,10 @@ To configure Firebase for this project, follow these steps:
 
 5. **Adjust the Collection Structure:**
 
-   - Set up the collections as below:
+   - Set up the collections as shown in the following images:
 
-   ![Collection Structure Example 1](https://github.com/user-attachments/assets/38580122-08a4-4499-a8fd-0f253652a239)  
-   ![Collection Structure Example 2](https://github.com/user-attachments//d563d7ad-f1ab-46ff-8185-640dcebd0363)
+   ![Collection Structure Example 1](https://github.com/user-attachments/assets/38580122-08a4-4499-a8fd-0f253652a239)
+   ![Collection Structure Example 2](https://github.com/user-attachments/assets/d563d7ad-f1ab-46ff-8185-640dcebd0363)
 
 6. **Update `firebase.js` File:**
    - Replace the `firebaseConfig` content with your Firebase configuration.

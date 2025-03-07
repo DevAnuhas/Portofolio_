@@ -1,4 +1,3 @@
-import { SpeedInsights } from "@vercel/speed-insights/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import "./index.css";
@@ -20,8 +19,6 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
 					<WelcomeScreen onLoadingComplete={() => setShowWelcome(false)} />
 				)}
 			</AnimatePresence>
-
-			<SpeedInsights />
 
 			{!showWelcome && (
 				<>
