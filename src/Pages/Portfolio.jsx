@@ -285,7 +285,7 @@ export default function FullWidthTabs() {
 							minHeight: "70px",
 							"& .MuiTab-root": {
 								fontSize: { xs: "0.9rem", md: "1rem" },
-								fontWeight: "600",
+								fontWeight: "200",
 								color: "#94a3b8",
 								textTransform: "none",
 								transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
@@ -313,9 +313,6 @@ export default function FullWidthTabs() {
 							},
 							"& .MuiTabs-indicator": {
 								height: 0,
-							},
-							"& .MuiTabs-flexContainer": {
-								gap: "8px",
 							},
 						}}
 					>
@@ -349,7 +346,7 @@ export default function FullWidthTabs() {
 					onChangeIndex={setValue}
 				>
 					<TabPanel value={value} index={0} dir={theme.direction}>
-						<div className="container mx-auto flex justify-center items-center overflow-hidden">
+						<div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%] pt-4 sm:pt-0">
 							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
 								{displayedProjects.map((project, index) => (
 									<div
@@ -379,7 +376,7 @@ export default function FullWidthTabs() {
 					</TabPanel>
 
 					<TabPanel value={value} index={1} dir={theme.direction}>
-						<div className="container mx-auto flex justify-center items-center overflow-hidden">
+						<div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%] pt-4 sm:pt-0">
 							<div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
 								{displayedCertificates.map((certificate, index) => (
 									<div key={index} data-aos="fade-up" data-aos-duration="1000">
@@ -403,8 +400,8 @@ export default function FullWidthTabs() {
 					</TabPanel>
 
 					<TabPanel value={value} index={2} dir={theme.direction}>
-						<div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
-							<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
+						<div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%] pt-4 sm:pt-0">
+							<div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-6 xl:gap-8 gap-4">
 								{techStacks.map((stack, index) => (
 									<div key={index} data-aos="fade-up" data-aos-duration="1000">
 										<TechStackIcon

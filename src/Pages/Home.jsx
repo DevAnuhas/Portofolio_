@@ -189,7 +189,7 @@ const Home = () => {
 			isTyping ? TYPING_SPEED : ERASING_SPEED
 		);
 		return () => clearTimeout(timeout);
-	}, [handleTyping]);
+	}, [handleTyping, isTyping]);
 
 	return (
 		<div className="min-h-screen bg-[#030014] overflow-hidden" id="Home">
@@ -198,8 +198,8 @@ const Home = () => {
 					isLoaded ? "opacity-100" : "opacity-0"
 				}`}
 			>
-				<div className="container mx-auto px-[5%] sm:px-6 lg:px-[0%] min-h-screen">
-					<div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-0 sm:gap-12 lg:gap-20">
+				<div className="container mx-auto px-[5%] sm:px-6 min-h-screen">
+					<div className="flex flex-col lg:flex-row items-center justify-center pt-20 lg:pt-0 lg:h-screen md:justify-between gap-0 lg:gap-8">
 						{/* Left Column */}
 						<div
 							className="w-full lg:w-1/2 space-y-6 sm:space-y-8 text-left lg:text-left order-1 lg:order-1 lg:mt-0"
@@ -224,7 +224,7 @@ const Home = () => {
 
 								{/* Description */}
 								<p
-									className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
+									className="text-base md:text-lg text-gray-400 max-w-[480px] leading-relaxed font-light"
 									data-aos="fade-up"
 									data-aos-delay="1000"
 								>
@@ -272,7 +272,7 @@ const Home = () => {
 
 						{/* Right Column */}
 						<div
-							className="w-full py-[10%] sm:py-0 lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
+							className="w-full lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
 							onMouseEnter={() => setIsHovering(true)}
 							onMouseLeave={() => setIsHovering(false)}
 							data-aos="fade-left"

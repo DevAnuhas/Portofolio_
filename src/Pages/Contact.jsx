@@ -123,10 +123,7 @@ const ContactPage = () => {
 				id="Contact"
 			>
 				<div className="container px-[1%] grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-[45%_55%] 2xl:grid-cols-[35%_65%] gap-12">
-					<div className="bg-white/5 backdrop-blur-xl rounded-3xl p-3 py-3 md:p-10 md:py-8 shadow-2xl transform transition-all duration-300 hover:shadow-[#6366f1]/10">
-						<SocialLinks />
-					</div>
-
+					<SocialLinks />
 					<div
 						data-aos="fade-right"
 						data-aos-duration="1200"

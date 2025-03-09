@@ -37,14 +37,14 @@ const StatCard = memo(
 			data-aos-duration={1300}
 			className="relative group"
 		>
-			<div className="relative z-10 bg-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-white/10 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col justify-between">
+			<div className="relative z-10 bg-gray-900/50 backdrop-blur-lg rounded-2xl px-6 py-4 sm:p-6 border border-white/10 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col justify-between">
 				<div
 					className={`absolute -z-10 inset-0 bg-gradient-to-br ${color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}
 				></div>
 
 				<div className="flex items-center justify-between mb-4">
-					<div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/10 transition-transform group-hover:rotate-6">
-						<Icon className="w-8 h-8 text-white" />
+					<div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center bg-white/10 transition-transform group-hover:rotate-6">
+						<Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
 					</div>
 					<span
 						className="text-4xl font-bold text-white"
@@ -170,7 +170,7 @@ const AboutPage = () => {
 			<Header />
 
 			<div className="w-full mx-auto pt-8 sm:pt-12 relative">
-				<div className="flex flex-col-reverse lg:grid lg:grid-cols-[65%_35%] 2xl:grid-cols-[75%_25%] gap-12 items-center">
+				<div className="flex flex-col-reverse lg:grid lg:grid-cols-[65%_35%] 2xl:grid-cols-[75%_25%] gap-16 lg:gap-8 items-center">
 					<div className="space-y-6 text-center lg:text-left">
 						<h2
 							className="text-3xl sm:text-4xl lg:text-5xl font-bold"
@@ -190,7 +190,7 @@ const AboutPage = () => {
 						</h2>
 
 						<p
-							className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify max-w-[600px] pb-4 sm:pb-0"
+							className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify max-w-[520px] pb-4 sm:pb-0"
 							data-aos="fade-right"
 							data-aos-duration="1500"
 						>
@@ -230,8 +230,8 @@ const AboutPage = () => {
 						</div>
 					</div>
 
-					<a href="#Portfolio">
-						<div className="grid grid-cols-1 gap-6 mt-16 cursor-pointer">
+					<a href="#Portfolio" className="w-full">
+						<div className="grid md:grid-cols-3 lg:grid-cols-1 gap-4 sm:px-[10%] md:px-0 cursor-pointer">
 							{statsData.map((stat) => (
 								<StatCard key={stat.label} {...stat} />
 							))}
