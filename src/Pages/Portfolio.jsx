@@ -2,7 +2,6 @@ import { useEffect, useState, useCallback } from "react";
 import { db, collection } from "../firebase";
 import { getDocs } from "firebase/firestore";
 import PropTypes from "prop-types";
-import SwipeableViews from "react-swipeable-views";
 import { useTheme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
@@ -86,7 +85,7 @@ function TabPanel({ children, value, index, ...other }) {
 		>
 			{value === index && (
 				<Box sx={{ p: { xs: 1, sm: 3 } }}>
-					<Typography>{children}</Typography>
+					<Typography component="div">{children}</Typography>
 				</Box>
 			)}
 		</div>
@@ -241,11 +240,11 @@ export default function FullWidthTabs() {
 						Portfolio Showcase
 					</span>
 				</h2>
-				<p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
+				<div className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
 					Explore my journey through projects, certifications, and technical
 					expertise. Each section represents a milestone in my continuous
 					learning path.
-				</p>
+				</div>
 			</div>
 
 			<Box sx={{ width: "100%" }}>
@@ -340,10 +339,11 @@ export default function FullWidthTabs() {
 					</Tabs>
 				</AppBar>
 
-				<SwipeableViews
-					axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-					index={value}
-					onChangeIndex={setValue}
+				<div
+					style={{
+						display: value === 0 ? "block" : "none",
+						transition: "opacity 0.5s",
+					}}
 				>
 					<TabPanel value={value} index={0} dir={theme.direction}>
 						<div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%] pt-4 sm:pt-0">
@@ -374,7 +374,14 @@ export default function FullWidthTabs() {
 							</div>
 						)}
 					</TabPanel>
+				</div>
 
+				<div
+					style={{
+						display: value === 1 ? "block" : "none",
+						transition: "opacity 0.5s",
+					}}
+				>
 					<TabPanel value={value} index={1} dir={theme.direction}>
 						<div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%] pt-4 sm:pt-0">
 							<div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
@@ -398,7 +405,14 @@ export default function FullWidthTabs() {
 							</div>
 						)}
 					</TabPanel>
+				</div>
 
+				<div
+					style={{
+						display: value === 2 ? "block" : "none",
+						transition: "opacity 0.5s",
+					}}
+				>
 					<TabPanel value={value} index={2} dir={theme.direction}>
 						<div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%] pt-4 sm:pt-0">
 							<div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-6 xl:gap-8 gap-4">
@@ -413,7 +427,7 @@ export default function FullWidthTabs() {
 							</div>
 						</div>
 					</TabPanel>
-				</SwipeableViews>
+				</div>
 			</Box>
 		</div>
 	);

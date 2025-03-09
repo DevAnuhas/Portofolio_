@@ -56,7 +56,6 @@ const SocialLinks = () => {
 				<span className="inline-block w-8 h-1 bg-indigo-500 rounded-full"></span>
 				Connect With Me
 			</h3>
-
 			<div className="flex flex-col gap-4">
 				{/* LinkedIn - Primary Row 1 */}
 				<a
